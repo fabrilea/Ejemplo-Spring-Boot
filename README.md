@@ -21,7 +21,7 @@ src/
 │   ├── java/        # Código fuente de la aplicación
 │   └── resources/   # Configuración y recursos (application.properties)
 └── test/
-└── java/        # Tests unitarios (si aplica)
+└── java/        
 
 ````
 
