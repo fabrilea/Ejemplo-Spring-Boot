@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "5cdb55fd-b552-4b6e-b944-89499c1e07fd",
+		"name": "Microservicio-Factura Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30802274"
+	},
+	"item": [
+		{
+			"name": "DetalleFacturaController",
+			"item": [
+				{
+					"name": "Obtener todos los detalles de factura",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MTczMjU4NjU2NCwiaWF0IjoxNzMyNTAwMTY0fQ.rD18hORkVMqJfKZg0QmaQQf6geQ9DAJJo11pWPyoCSKqXQmKyg6JIfUtRA2KS-6OsEwyPvFFlVPkV7TzP8TNBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/detallefactura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"detallefactura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener detalle de factura por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/detallefactura/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"detallefactura",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear detalle de factura",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MTczMjU4NjU2NCwiaWF0IjoxNzMyNTAwMTY0fQ.rD18hORkVMqJfKZg0QmaQQf6geQ9DAJJo11pWPyoCSKqXQmKyg6JIfUtRA2KS-6OsEwyPvFFlVPkV7TzP8TNBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"facturaId\": 1, \"viajeId\": 12345, \"tarifaBase\": 20.0, \"tarifaExtra\": 5.0, \"tiempoUso\": 120, \"tiempoPausado\": 15 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/api/detallefactura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"detallefactura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar detalle de factura",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/detallefactura/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"detallefactura",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar detalle de factura",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"facturaId\": 1, \"viajeId\": 12345, \"tarifaBase\": 20.0, \"tarifaExtra\": 5.0, \"tiempoUso\": 120, \"tiempoPausado\": 15 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/api/detallefactura/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"detallefactura",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FacturaController",
+			"item": [
+				{
+					"name": "Obtener todas las facturas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MTczMjU4NjU2NCwiaWF0IjoxNzMyNTAwMTY0fQ.rD18hORkVMqJfKZg0QmaQQf6geQ9DAJJo11pWPyoCSKqXQmKyg6JIfUtRA2KS-6OsEwyPvFFlVPkV7TzP8TNBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/factura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"factura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener factura por ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MTczMjU4NjU2NCwiaWF0IjoxNzMyNTAwMTY0fQ.rD18hORkVMqJfKZg0QmaQQf6geQ9DAJJo11pWPyoCSKqXQmKyg6JIfUtRA2KS-6OsEwyPvFFlVPkV7TzP8TNBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/factura/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"factura",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear factura",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MTczMjU4NjU2NCwiaWF0IjoxNzMyNTAwMTY0fQ.rD18hORkVMqJfKZg0QmaQQf6geQ9DAJJo11pWPyoCSKqXQmKyg6JIfUtRA2KS-6OsEwyPvFFlVPkV7TzP8TNBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"usuarioId\": 2, \"fechaEmision\": \"2024-05-01T08:10:00\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/api/factura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"factura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar factura",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/factura/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"factura",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar factura",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"usuarioId\": 1, \"fechaEmision\": \"2024-01-01T08:00:00\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/api/factura/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"factura",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener total facturado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/factura/total-facturado?anio=2024&mesInicio=1&mesFin=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"factura",
+								"total-facturado"
+							],
+							"query": [
+								{
+									"key": "anio",
+									"value": "2024"
+								},
+								{
+									"key": "mesInicio",
+									"value": "1"
+								},
+								{
+									"key": "mesFin",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TarifaController",
+			"item": [
+				{
+					"name": "Obtener todas las tarifas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MTczMjU4NjU2NCwiaWF0IjoxNzMyNTAwMTY0fQ.rD18hORkVMqJfKZg0QmaQQf6geQ9DAJJo11pWPyoCSKqXQmKyg6JIfUtRA2KS-6OsEwyPvFFlVPkV7TzP8TNBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/tarifa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"tarifa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener tarifa por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/tarifa/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"tarifa",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear tarifa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"tipo\": \"BASE\", \"fechaInicio\": \"2024-01-01\", \"fechaFin\": \"2024-12-31\", \"monto\": 50.0 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/api/tarifa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"tarifa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar tarifa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/tarifa/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"tarifa",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar tarifa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"tipo\": \"Normal\", \"fechaInicio\": \"2024-01-01\", \"fechaFin\": \"2024-12-31\", \"monto\": 50.0 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/api/tarifa/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"tarifa",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ajustar precios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MTczMjU4NjU2NCwiaWF0IjoxNzMyNTAwMTY0fQ.rD18hORkVMqJfKZg0QmaQQf6geQ9DAJJo11pWPyoCSKqXQmKyg6JIfUtRA2KS-6OsEwyPvFFlVPkV7TzP8TNBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/tarifa/ajustar-precios?nuevaTarifaBase=15.0&nuevaTarifaExtra=10.0&fechaInicio=2024-01-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"tarifa",
+								"ajustar-precios"
+							],
+							"query": [
+								{
+									"key": "nuevaTarifaBase",
+									"value": "15.0"
+								},
+								{
+									"key": "nuevaTarifaExtra",
+									"value": "10.0"
+								},
+								{
+									"key": "fechaInicio",
+									"value": "2024-01-01"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

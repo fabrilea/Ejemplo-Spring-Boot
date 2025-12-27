@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "fe3dbd4a-68f7-4b09-a943-86493121f480",
+		"name": "Microservicio-Administrador Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30802274"
+	},
+	"item": [
+		{
+			"name": "MantenimientoController",
+			"item": [
+				{
+					"name": "Obtener todos los mantenimientos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MTczMjQwMTM4NiwiaWF0IjoxNzMyMzE0OTg2fQ.z6VBEXxj9WwlQ57DxJD6aNWIM-mT9DAS15-GF4sqLeVHpQU1CSv51N3XrizFtfr7_x4I07hTGIezTCaFtj_8cA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/mantenimiento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"mantenimiento"
+							]
+						},
+						"description": "Obtiene todos los mantenimientos"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener un mantenimiento por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/mantenimiento/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"mantenimiento",
+								"1"
+							]
+						},
+						"description": "Obtiene un mantenimiento por ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear un nuevo mantenimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"monopatinId\": 1,\n    \"descripcion\": \"Revisión de frenos\",\n    \"fechaInicio\": \"2024-01-01T08:00:00\",\n    \"fechaFin\": null\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/api/mantenimiento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"mantenimiento"
+							]
+						},
+						"description": "Crea un nuevo mantenimiento"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar un mantenimiento por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/mantenimiento/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"mantenimiento",
+								"1"
+							]
+						},
+						"description": "Elimina un mantenimiento por ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar un mantenimiento por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"monopatinId\": 1,\n    \"descripcion\": \"Mantenimiento completo de sistema eléctrico\",\n    \"fechaInicio\": \"2024-01-01T08:00:00\",\n    \"fechaFin\": \"2024-01-02T12:00:00\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/api/mantenimiento/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"mantenimiento",
+								"1"
+							]
+						},
+						"description": "Actualiza un mantenimiento por ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Iniciar mantenimiento para un monopatín específico",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MTczMjU4NjU2NCwiaWF0IjoxNzMyNTAwMTY0fQ.rD18hORkVMqJfKZg0QmaQQf6geQ9DAJJo11pWPyoCSKqXQmKyg6JIfUtRA2KS-6OsEwyPvFFlVPkV7TzP8TNBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/api/mantenimiento/iniciar/2?descripcion=\"Revisión frenos\"",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"mantenimiento",
+								"iniciar",
+								"2"
+							],
+							"query": [
+								{
+									"key": "descripcion",
+									"value": "\"Revisión frenos\""
+								}
+							]
+						},
+						"description": "Inicia mantenimiento para un monopatín específico"
+					},
+					"response": []
+				},
+				{
+					"name": "Finalizar mantenimiento para un monopatín específico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/api/mantenimiento/finalizar/1{monopatinId}1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"mantenimiento",
+								"finalizar",
+								"1{monopatinId}1"
+							]
+						},
+						"description": "Finaliza mantenimiento para un monopatín específico"
+					},
+					"response": []
+				},
+				{
+					"name": "Generar reporte de uso de monopatines",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYWJyaSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MTczMjU4NjU2NCwiaWF0IjoxNzMyNTAwMTY0fQ.rD18hORkVMqJfKZg0QmaQQf6geQ9DAJJo11pWPyoCSKqXQmKyg6JIfUtRA2KS-6OsEwyPvFFlVPkV7TzP8TNBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"incluirPausas\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/api/mantenimiento/reporte-uso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"api",
+								"mantenimiento",
+								"reporte-uso"
+							]
+						},
+						"description": "Genera un reporte de uso de monopatines, opcionalmente incluyendo pausas"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "adminController",
+			"item": [
+				{
+					"name": "Anular una cuenta por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/admin/anularCuenta/1{id}1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"admin",
+								"anularCuenta",
+								"1{id}1"
+							]
+						},
+						"description": "Anula una cuenta por ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener monopatines con mínimo de viajes en un año específico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/admin/monopatinViajes/2/2024",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"admin",
+								"monopatinViajes",
+								"2",
+								"2024"
+							]
+						},
+						"description": "Obtiene monopatines con un mínimo de viajes en un año específico"
+					},
+					"response": []
+				},
+				{
+					"name": "Comparación de monopatines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/admin/monopatines/comparacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"admin",
+								"monopatines",
+								"comparacion"
+							]
+						},
+						"description": "Comparación de monopatines"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener el total facturado entre meses de un año",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/admin/factura/total-facturado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"admin",
+								"factura",
+								"total-facturado"
+							]
+						},
+						"description": "Obtiene el total facturado entre meses específicos de un año"
+					},
+					"response": []
+				},
+				{
+					"name": "Ajustar los precios de tarifas a partir de una fecha específica",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"nuevaTarifaBase\": 15.0, \"nuevaTarifaExtra\": 10.0, \"fechaInicio\": \"2024-11-11T16:48:48.974+00:00\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/admin/tarifa/ajustar-precios?nuevaTarifaBase=15&nuevaTarifaExtra=10&fechaInicio=2024-11-11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"admin",
+								"tarifa",
+								"ajustar-precios"
+							],
+							"query": [
+								{
+									"key": "nuevaTarifaBase",
+									"value": "15"
+								},
+								{
+									"key": "nuevaTarifaExtra",
+									"value": "10"
+								},
+								{
+									"key": "fechaInicio",
+									"value": "2024-11-11"
+								}
+							]
+						},
+						"description": "Ajusta los precios de las tarifas a partir de una fecha específica"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
