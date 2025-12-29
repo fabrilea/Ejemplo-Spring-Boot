@@ -113,3 +113,6 @@ servicios y repositorios según las necesidades del desarrollo.
 
 **Fabrizio Leali**
 GitHub: [https://github.com/fabrilea](https://github.com/fabrilea)
+
+**Claudia Gogorza**
+GitHub: [https://github.com/fabrilea](https://github.com/cgogorza)
