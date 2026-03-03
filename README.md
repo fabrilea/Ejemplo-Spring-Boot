@@ -110,9 +110,11 @@ servicios y repositorios según las necesidades del desarrollo.
 
 
 ## 👨‍💻 Autor
+**Felipe Egusquiza**
+GitHub: [https://github.com/FelipeEgus](https://github.com/FelipeEgus)
 
 **Fabrizio Leali**
 GitHub: [https://github.com/fabrilea](https://github.com/fabrilea)
 
 **Claudia Gogorza**
-GitHub: [https://github.com/fabrilea](https://github.com/cgogorza)
+GitHub: [https://github.com/cgogorza](https://github.com/cgogorza)
